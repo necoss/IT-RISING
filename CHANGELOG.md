@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Button "To the top"
 - Adaptive version of web site for small laptops.
 
+## [1.5] 2022-09-11
+### Fixed: 
+- index.html location for GitHub
+- Color of the scrollbar
+
 ## [1.4] - 2022-09-11 [Global_Update]
 ### Added:
 - JavaScript Accordion
@@ -16,8 +21,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Changed:
 - The whole design of the Web Pages.
 - Removed the UIkit Framework.
-
-
 
 ## [1.3] - 2022-08-17
 ### Added:
