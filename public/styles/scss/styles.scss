@@ -1,0 +1,888 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin advantages-graph-text-h3 {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: #172755;
+    text-align: left;
+}
+
+@mixin advantages-graph-text-p {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #8794BA;
+    text-align: left;
+    padding-top: 30px;
+}
+
+@mixin clearfix {
+    clear: both;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1232px;
+    padding-right: 180px;
+    padding-left: 180px;
+}
+
+body {
+    ::selection {
+        background-color: #FB9333;
+        color: white;
+    }
+
+    scroll-behavior: smooth;
+
+    background-color: #E5E5E5 !important;
+
+    .header-background {
+        background-image: url(../../img/header-images/background.png); // Задний фон Шапки
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        .header-navigation {
+            padding-top: 50px; // Отступ сверху
+            padding-bottom: 110px;
+
+            // position: fixed;
+            nav {
+                @include flex-center-between();
+
+                ul {
+                    list-style: none;
+                }
+
+                .ul-navigation-logo {
+                    width: 165.83px;
+                    height: 45px;
+                    padding-left: 0;
+                }
+
+                .ul-navigation-list {
+                    width: 403px;
+                    display: flex;
+                    margin-right: 320px;
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            font-family: 'Rubik';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #8794BA;
+
+                        }
+
+                        a:hover {
+                            color: #8794bad2;
+                        }
+                    }
+                }
+
+                .ul-navigation-button {
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: #8794BA;
+                            font-family: 'Rubik';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            width: 113px;
+                            height: 19px;
+                            padding: 10px 53px; // Отступы кнопки
+                            border: 1px solid #465B95; // Контур кнопки
+                            border-radius: 68px;
+                            transition: .3s all;
+                        }
+
+                        a:hover {
+                            // Кнопка при наведении
+                            color: white;
+                            background-color: #FB9333;
+                            border: 1px solid #FB9333;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-showcase {
+            display: flex;
+            padding-bottom: 144px;
+
+            .header-showcase-text {
+                .header-showcase-text-title {
+                    // h1
+                    max-width: 550px;
+
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 120%;
+                    color: #FFFFFF;
+                }
+
+                .header-showcase-text-descr {
+                    // p
+                    width: 550px;
+
+                    padding-top: 15px; // Отступ от h1
+                    margin-bottom: 50px; // Отступ от кнопки
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #8794BA;
+                }
+
+                .header-showcase-text-button {
+                    // a
+                    max-width: 215px;
+
+                    padding: 10px 80px;
+                    text-decoration: none;
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                    background: #FB9333;
+                    border: 1px solid #FB9333;
+                    border-radius: 68px;
+                    transition: .3s all;
+                }
+
+                .header-showcase-text-button:hover {
+                    background-color: transparent;
+                }
+            }
+
+            .header-showcase-link {
+                display: flex;
+
+                .header-showcase-link-image {
+                    margin-top: -30px;
+
+                    img {
+                        width: 639px;
+                        height: 360px;
+                    }
+                }
+
+                .header-showcase-link-icons {
+                    .ul-header-showcase-icons {
+                        list-style: none;
+
+                        li {
+                            margin-top: 16px;
+
+                            a {
+                                img {
+                                    max-width: 20px;
+                                    max-height: 20px;
+                                    transition: .3s all;
+                                }
+
+                                img:hover {
+                                    background-color: #FB9333;
+                                    border-radius: 100%;
+                                }
+                            }
+                        }
+
+                        li:first-of-type {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Блок с преимуществами
+    .main-advantages {
+        margin-top: 35px;
+
+        .main-advantages-text {
+            .h1-main-advantages-text {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 47px;
+                text-align: center;
+
+                color: #172755;
+            }
+
+            .p-main-advantages-text {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                text-align: center;
+                color: #8794BA;
+                margin-top: 30px;
+            }
+        }
+
+        .main-advantages-cards {
+            margin-top: 81px;
+
+            .main-advantages-cards-column {
+                .image-main-advantage-column {
+                    text-align: center;
+                    max-width: 60px; // Максимальный размер
+                }
+
+                .h2-main-advantages-cards {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #172755;
+                    padding-top: 26px; // отступы от блоков слов 
+                }
+
+                .p-main-advantages-cards {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    text-align: center;
+                    color: #8794BA;
+                    padding-top: 15px;
+                }
+            }
+        }
+
+        .main-advantages-service {
+            margin-top: 176px;
+
+            .main-advantages-service-time {
+                @include flex-center-between();
+
+                .main-advantages-service-time-text {
+                    width: 480px;
+
+                    .h3-main-advantages-service-time-text__styles {
+                        @include advantages-graph-text-h3();
+                    }
+
+                    .p-main-advantages-service-time-text__styles {
+                        @include advantages-graph-text-p();
+                    }
+                }
+
+                .main-advantages-graph {
+                    // Белая рамка бэкграунда
+                    background: #FFFFFF;
+                    box-shadow: 0px 19.2249px 53.4024px -16.0207px rgba(25, 42, 89, 0.2);
+                    border-radius: 32.0414px;
+                    // Отступ всей белой рамки от текста
+                    padding: 52px 72px;
+
+                    .p-main-advantages-first-graph {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 140%;
+                        // text-align: center;
+                        color: #8794BA;
+                    }
+
+                    .main-advantages-graph-details {
+                        display: flex;
+
+                        .img-main-advantages-graph-details {
+                            padding-top: 17px;
+                        }
+
+                        .main-advantages-graph__presentage {
+                            padding-top: 52px;
+
+                            .main-advantages-graph__styles {
+                                h4 {
+                                    font-family: 'Rubik';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 30px;
+                                    line-height: 36px;
+                                    color: #0088F0;
+                                }
+
+                                p {
+                                    font-family: 'Rubik';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 150%;
+                                    color: #8794BA;
+                                }
+                            }
+
+                            .main-advantages-graph-searching {
+                                h4 {
+                                    color: #FB9333;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-advantages-quality {
+                @include flex-center-between();
+                margin-top: 175px;
+
+                .main-advantages-quality-image {
+                    width: 600px;
+                    height: 400px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 19.2249px 53.4024px -16.0207px rgba(25, 42, 89, 0.2);
+                    border-radius: 32.0414px;
+
+                    .img-main-advantages-quality {
+                        padding: 65px;
+                    }
+
+                    .p-main-advantages-quality {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 140%;
+                        color: #8794BA;
+                        text-align: center;
+                        // Текст к картинке
+                        margin-top: -50px;
+                    }
+
+                }
+
+                .main-advantages-service-quality-text {
+                    width: 480px;
+
+                    .h3-main-advantages-quality-text {
+                        @include advantages-graph-text-h3();
+                    }
+
+                    .p-main-advantages-quality-text {
+                        @include advantages-graph-text-p();
+                    }
+                }
+            }
+        }
+    }
+
+    // Блок с переходом к тренажёрам
+    .main-start-learning {
+        margin-top: 256px;
+        padding: 48px 150px;
+        background-image: url(../../img/main-images/start-learning/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .h3-main-start-learning-title {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 171.4%;
+            text-align: center;
+            color: white;
+        }
+
+        .main-start-learning-cards {
+            .start-learning-cards {
+                margin-top: 22.5px;
+                background: rgba(9, 24, 30, 0.59);
+                border-radius: 10px;
+                width: 300px;
+                // Отступ внути карточек
+                padding: 39px 28px 100px 28px;
+
+                .img-start-learning-cards {
+                    text-align: center;
+                }
+
+                .h4-start-learning-cards {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 131.9%;
+                    text-align: center;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    padding-top: 34px;
+
+                    span {
+                        color: #FB9333;
+                    }
+                }
+            }
+        }
+
+        .button-main-start-learning {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            margin-top: 90px;
+
+            a {
+                color: white;
+                background-color: #FB9333;
+                padding: 15px 100px;
+                border: 1px solid #FB9333;
+                border-radius: 68px;
+                text-decoration: none;
+                transition: .3s all;
+            }
+
+            a:hover {
+                background-color: rgb(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    // Блок с часто задаваемыми вопросами
+    .main-faq {
+        margin-top: 200px;
+
+        .main-faq-title {
+            .h4-main-faq-title {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 40px;
+                line-height: 70px;
+                letter-spacing: 0.405em;
+                text-transform: uppercase;
+                text-align: center;
+                color: #172755;
+            }
+
+            .p-main-faq-title {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                text-transform: uppercase;
+                text-align: center;
+                color: #172755;
+            }
+        }
+
+        .main-faq-questions {
+            padding-top: 100px;
+
+            .main-faq-accordion {
+                background: rgb(223, 190, 255);
+                background: linear-gradient(90deg, rgba(223, 190, 255, 0.33126754119616597) 0%, rgba(119, 196, 255, 0.42370451598608194) 100%);
+                margin-top: 15px;
+                color: #172755;
+                cursor: pointer;
+                padding: 23px;
+                width: 100%;
+                text-align: left;
+                border: none;
+                outline: none;
+                transition: .3s all;
+                border-radius: 0px 0px 20px 20px;
+                // Стили для текста
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 23px;
+                line-height: 36px;
+            }
+
+            .main-faq-accordion:hover {
+                background: rgb(223, 190, 255);
+                background: linear-gradient(90deg, rgba(223, 190, 255, 1) 0%, rgba(119, 196, 255, 1) 100%);
+                transition: .3s ease-in-out;
+            }
+
+            .main-faq-accordion::after {
+                content: '\02795';
+                color: #171717;
+                float: right;
+                margin-left: 5px;
+            }
+
+            .active {
+                background: rgb(223, 190, 255);
+                background: linear-gradient(90deg, rgba(223, 190, 255, 1) 0%, rgba(119, 196, 255, 1) 100%);
+                border-radius: 20px 20px 0px 0px;
+            }
+
+            .active::after {
+                content: "\2796";
+            }
+
+            .main-faq-answers {
+                padding: 0 30px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                // Стили для ответов
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: #525b75;
+            }
+        }
+    }
+
+    // Футер
+    .footer-background {
+        background-image: url(../../img/footer-images/footer-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        // Отступ от прошлого блока
+        margin-top: 90px;
+        // Отступ тексту
+        padding-top: 400px;
+
+        .footer-splitter {
+            border-top: 1px solid #2A407C;
+            width: 1080px;
+        }
+
+        .footer-navigation {
+            nav {
+                display: flex;
+
+                ul {
+                    list-style: none;
+                }
+
+                .ul-footer-navigation-logo {
+                    padding-left: 0;
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            display: flex;
+
+                            // align-items: center;
+                            .image-logo__styles {}
+
+                            .logo__styles-text {
+
+                                .h1-logo__styles {
+                                    font-family: 'Rubik';
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 17px;
+                                    line-height: 20px;
+                                    color: #FFFFFF;
+                                    text-transform: uppercase;
+
+                                    span {
+                                        color: #FB9333;
+                                    }
+                                }
+
+                                .h2-logo__styles {
+                                    font-family: 'Rubik';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                    color: #FFFFFF;
+                                    text-transform: uppercase;
+                                    // Отступ сверху
+                                    margin-top: -12px;
+
+                                    span {
+                                        color: #FB9333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ul-footer-navigation-list {
+                    display: flex;
+                    padding-left: 0;
+
+                    li {
+                        margin-right: 36px;
+
+                        a {
+                            text-decoration: none;
+                            font-family: 'Rubik';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #8794BA;
+                        }
+
+                        a:hover {
+                            color: #8794bad2;
+                        }
+                    }
+
+                    li:last-child {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // * Other language page
+    .main-choose-language {
+        padding-top: 70px;
+
+        .choose-language-text {
+            .h1-choose-language-text {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 47px;
+                text-align: center;
+                color: #1A1A1D;
+            }
+
+            .p-choose-language-text {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                text-align: center;
+                color: #8794BA;
+                text-transform: uppercase;
+                padding-top: 15px;
+            }
+        }
+
+        .language-cards-block {
+            margin-top: 60px;
+            .main-training-list__languages {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0px;
+                    padding-top: 40px;
+        
+                    a {
+                        text-decoration: none;
+                        background-color: white;
+                        border-radius: 0 0 10px 10px;
+                        box-shadow: 0 .5rem 1rem #00000026 !important;
+                        transition: 0.3s ease-in-out;
+        
+                        .training-list__languages__styles {
+                            width: 306px;
+                            height: 362px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                        }
+        
+                        .training-list__languages__styles__logo {
+                            h6 {
+                                color: white;
+                                font-family: 'Rubik';
+                                font-size: 40px;
+                                font-weight: 700;
+                                letter-spacing: 0.3em;
+                                margin: 0;
+                            }
+                        }
+        
+                        .training-list__languages__styles__descr {
+                            h6 {
+                                color: black;
+                                font-family: 'Rubik';
+                                font-size: 30px;
+                                font-weight: 600;
+                                margin: 25px 0 10px 15px;
+                            }
+        
+                            p {
+                                color: #c0c3c7;
+                                font-family: 'Rubik';
+                                font-size: 16px;
+                                letter-spacing: 0.1em;
+                                text-align: left;
+                                padding: 0 0 0 15px;
+                            }
+                        }
+        
+        
+                        .training-list__languages__html {
+                            background-color: #ff9900;
+                        }
+        
+                        .training-list__languages__js {
+                            background-color: #ffd11a;
+                        }
+        
+                        .training-list__languages__py {
+                            background-color: #009900;
+                        }
+        
+                        .training-list__languages__c-plus {
+                            background-color: #006699;
+                        }
+        
+                        .training-list__languages__php {
+                            background-color: #990099;
+                        }
+        
+                        .training-list__languages__c-sharp {
+                            background-color: #8080ff;
+                        }
+                    }
+        
+                    a:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }      
+        }
+    }
+    // * Cards
+    .main-lang-pg__cards {
+        margin-top: 60px;
+    
+        .main-lang-pg__cards__styles {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 .5rem 1rem #00000026 !important;
+            margin-top: 60px;
+    
+            .main-lang-pg__cards__styles__image {
+                img {
+                    max-width: 300px !important;
+                    height: 300px;
+                    margin-right: 15px;
+                }
+            }
+    
+            .main-lang-pg__cards__styles__info {
+                .main-lang-pg__cards__styles__info__name {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    h4 {
+                        color: #172755;
+                        font-family: 'Rubik';
+                        font-size: 35px;
+                        margin: 0;
+                    }
+    
+                    p {
+                        color: #172755;
+                        font-family: 'Rubik';
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin-right: 30px;
+                    }
+                }
+    
+                .main-lang-pg__cards__styles__info__description {
+                    p {
+                        color: #8794BA;
+                        font-family: 'Rubik';
+                        font-size: 17px;
+                        margin-top: 0px;
+                    }
+    
+                }
+    
+                .main-lang-pg__cards__styles__info__button {
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+                    margin-top: 30px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-family: 'Rubik';
+                        font-size: 16px;
+                        background-color: #FB9333;
+                        border: 2px solid #FB9333;
+                        border-radius: 5px;
+                        padding: 7px 15px;
+                        transition: .3s ease-in-out;
+
+                        margin-right: 20px;
+                    }
+    
+                    a:hover {
+                        background-color: white;
+                        color: #FB9333;
+                    }
+                }
+            }
+        }
+    
+        .main-cards__other-cards {
+            margin-top: 90px;
+    
+            p {
+                color: #aaaeb3;
+                font-family: 'Rubik';
+                font-size: 15px;
+                text-align: center;
+    
+                a {
+                    color: #FB9333;
+    
+                }
+            }
+        }
+    }
+}

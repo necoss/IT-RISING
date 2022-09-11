@@ -1,0 +1,5 @@
+## Сборник IT-тренажеров со всего интернета (RU)
+Проект IT-RISING.COM это навигатор в мире IT-Тренажёров Вам предоставляется каталог из самых доступных и интересных сервисов для изучения программирования. С нами вы забудете о бесконечном поиске ресурса с информацией – мы все нашли за вас! Сайты для отработки навыков более чем на 5 языках программирования, и мы не планируем останавливаться! Так же на нашем сайте размещено множество теоретической информации для изучения. И все это абсолютно бесплатно!
+
+## Collection of IT-trainings from all over the Internet (ENG)
+The IT-RISING.COM project is a navigator in the world of IT-Trainings. You are given a catalogue of the most accessible and interesting services for studying programming. With us you will forget about the endless search for a resource with information - we have found all of them for you! Web-sites to practice skills in more than 5 programming languages, and we don't plan to stop! Also on our web-site there is a lot of theoretical information for study. And all this is absolutely free!
